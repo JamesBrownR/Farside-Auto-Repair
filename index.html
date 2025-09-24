@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Farside Auto Repair — Tahlequah, OK</title>
+  <meta name="description" content="Farside Auto Repair — Full service auto repair in Tahlequah, OK. Call +1 (918) 718-4349" />
+
+  <style>
+    :root{
+      --brand-black: #0b0b0b; [cite: 1]
+      --brand-white: #ffffff; [cite: 2]
+      --brand-yellow: #ffd400; [cite: 2]
+      --muted: #6b6b6b; [cite: 2]
+      --card-bg: #f8f8f8; [cite: 2]
+      --accent: var(--brand-yellow); [cite: 2]
+      --max-width: 1100px; [cite: 2]
+    }
+    *{box-sizing:border-box} [cite: 3]
+    body{
+      margin:0; [cite: 3]
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; [cite: 4]
+      color:var(--brand-black); [cite: 4]
+      background:var(--brand-white); [cite: 4]
+      -webkit-font-smoothing:antialiased; [cite: 4]
+    }
+    a{color:inherit} [cite: 5]
+    header{
+      background:linear-gradient(90deg,var(--brand-black), #1b1b1b); [cite: 5]
+      color:var(--brand-white); [cite: 5]
+      padding:12px 16px; [cite: 5]
+      position:sticky; [cite: 5]
+      top:0; [cite: 6]
+      z-index:40; [cite: 6]
+      box-shadow:0 3px 8px rgba(0,0,0,0.25); [cite: 6]
+    }
+    .container{max-width:var(--max-width);margin:0 auto;} [cite: 6]
+    .topbar{display:flex;align-items:center;gap:16px;justify-content:space-between} [cite: 6]
+    .brand{display:flex;align-items:center;gap:12px;font-weight:700;font-size:18px} [cite: 6]
+    .brand .mark{width:44px;height:44px;border-radius:8px;background:var(--brand-yellow);display:inline-grid;place-items:center;color:var(--brand-black);font-weight:900} [cite: 6]
+    .contact-quick{display:flex;gap:12px;align-items:center} [cite: 6]
+    .phone-bubble{
+      background:transparent;border:2px solid var(--brand-yellow);color:var(--brand-white);padding:8px 12px;border-radius:8px;font-weight:700;text-decoration:none; [cite: 6]
+    }
+    .phone-bubble:active,.phone-bubble:focus{outline:3px solid rgba(255,212,0,0.15)} [cite: 7]
+    main{
+      padding: 24px 16px;
+      display: grid;
+      gap: 24px;
+    }
+    .card{background:var(--card-bg);border-radius:12px;padding: 20px;box-shadow:0 6px 18px rgba(10,10,10,0.06)} 
+    h1{margin:0;font-size:28px} 
+    h2{margin: 0 0 12px 0; font-size: 22px;} 
+    h3{margin:0 0 8px 0}
+    .address{font-weight:600} 
+    .hours{font-size:14px;color:var(--muted);margin-top:8px} 
+    .map-embed{width:100%;height:320px;border-radius:8px;overflow:hidden;border:1px solid #ddd; margin-top: 16px;} 
+    .services{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:16px} 
+    .service{padding:12px;border-radius:8px;background:linear-gradient(180deg,var(--brand-white),#fbfbfb);border:1px solid #eee} 
+    .gallery{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px} 
+    .gallery img{width:calc(33.333% - 6px);height:110px;object-fit:cover;border-radius:8px;border:1px solid #eee} 
+    @media(max-width:600px){ .gallery img{width:calc(50% - 4px);height:120px} }
+
+    /* Reviews compact style */
+    .reviews-list{display:grid;gap:8px} 
+    .review{
+      display:flex;align-items:flex-start;gap:12px;padding:12px;border-radius:8px;background:var(--brand-white);border:1px solid #e9e9e9;font-size:14px; [cite: 9]
+    }
+    .rev-left{width:62px;flex-shrink:0;display:flex;flex-direction:column;align-items:center;gap:6px} [cite: 9]
+    .avatar{width:46px;height:46px;border-radius:999px;background:#eee;display:grid;place-items:center;font-weight:700;color:#444} [cite: 9]
+    .stars{display:flex;gap:2px} [cite: 9]
+    .star{width:14px;height:14px;display:inline-block} [cite: 9]
+    .rev-body{flex:1;min-width:0} [cite: 9]
+    .rev-name{font-weight:700;font-size:14px;margin-bottom:6px} [cite: 9]
+    .rev-text{color:var(--muted);line-height:1.4;font-size:13px;min-height:18px} [cite: 9]
+
+    .btn{
+      display:inline-block;padding:12px 16px;border-radius:10px;border:none;background:var(--brand-yellow);color:var(--brand-black);font-weight:700;text-decoration:none;cursor:pointer; [cite: 9]
+      box-shadow:0 4px 10px rgba(0,0,0,0.08) [cite: 10]
+    }
+    .muted{color:var(--muted)} [cite: 10]
+    footer{padding:32px 16px;background:#fafafa;border-top:1px solid #eee;margin-top:20px} [cite: 10]
+    .footer-grid{display:grid;grid-template-columns:1fr;gap:24px} [cite: 10]
+    @media(min-width:600px){ .footer-grid{grid-template-columns: 1fr 1fr} }
+
+    /* contact form */
+    form{margin-top:16px;}
+    form .row{display:flex;gap:8px} [cite: 10]
+    form label {display: block; margin-bottom: 12px;}
+    form input, form textarea{
+      width:100%;padding:12px;border-radius:8px;border:1px solid #ddd;background:var(--brand-white); margin-top: 4px; [cite: 10]
+    }
+    .meta{font-size:13px;color:var(--muted);margin-top:6px} [cite: 10]
+    a.access-link{color:var(--brand-black);text-decoration:underline} [cite: 10]
+    .small{font-size:13px} [cite: 10]
+    hr{margin:16px 0;border:none;border-top:1px solid #eee}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container topbar" role="banner"> [cite: 11]
+      <div class="brand" aria-hidden="false">
+        <div class="mark">F</div>
+        <div>
+          <div style="font-size:14px;opacity:0.95">Farside Auto Repair</div>
+          <div style="font-size:12px;color: #ddd;">14371 OK-51, Tahlequah, OK 74464</div>
+        </div>
+      </div>
+
+      <div class="contact-quick">
+        <a class="phone-bubble" href="tel:+19187184349" aria-label="Call Farside Auto Repair">Call +1 (918) 718-4349</a> [cite: 12]
+        <a class="phone-bubble" href="mailto:info@farsideautorepair.example">Email</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card" aria-labelledby="main-heading">
+      <h1 id="main-heading">Farside Auto Repair</h1>
+      <p class="muted small">Full-service auto repair · Tahlequah, OK</p> [cite: 13]
+
+      <div style="display:flex;gap:12px;margin-top:12px;align-items:center;flex-wrap:wrap">
+        <div class="address">
+          14371 OK-51, Tahlequah, OK 74464
+        </div>
+        <div class="meta">• <strong>Hours:</strong> Tue–Fri 8AM–7PM · Sat 8AM–5PM · Sun Closed · Mon 8AM–7PM</div>
+      </div>
+
+      <div class="map-embed"> [cite: 14]
+        <iframe
+          title="Farside Auto Repair map"
+          src="https://www.google.com/maps/place/Farside+Auto+Repair/@35.9191072,-95.3458143,11z/data=!4m10!1m2!2m1!1sauto+care+oklahoma+tahlequah!3m6!1s0x87c9fdf5bbf11f29:0x9582ff3f5cde79a4!8m2!3d35.9191072!4d-95.0409437!15sChxhdXRvIGNhcmUgb2tsYWhvbWEgdGFobGVxdWFoWh4iHGF1dG8gY2FyZSBva2xhaG9tYSB0YWhsZXF1YWiSARBhdXRvX3JlcGFpcl9zaG9wmgEjQ2haRFNVaE5NRzluUzBWSlEwRm5TVVJVY3poZlFtTlJFQUWqAXAKBy9tLzBrNGoKCC9tLzA1bXBoCggvbS8wejRzdBABKg0iCWF1dG8gY2FyZSgAMh4QASIaASVCiQZLR8_b_95Rqx1KfG-Cz9NIfJlUxMcyIBACIhxhdXRvIGNhcmUgb2tsYWhvbWEgdGFobGVxdWFo4AEA-gEECAAQOw!16s%2Fg%2F11swy6knhm?entry=ttu&g_ep=EgoyMDI1MDkyMS4wIKXMDSoASAFQAw%3D%3D"
+          width="100%" height="100%" style="border:0;"
+          [cite_start]allowfullscreen="" loading="lazy"></iframe> [cite: 15]
+      </div>
+
+      <h2 style="margin-top:20px">Services</h2>
+      <div class="services" aria-hidden="false">
+        <div class="service"><strong>General Repair</strong><div class="small muted">Brakes, suspension, engine diagnostics</div></div>
+        <div class="service"><strong>Transmission</strong><div class="small muted">Clutch, fluid, rebuilds</div></div>
+        <div class="service"><strong>Electrical</strong><div class="small muted">Batteries, starters, wiring</div></div>
+        <div class="service"><strong>Preventive Care</strong><div class="small muted">Oil, filters, inspections</div></div> [cite: 16]
+        <div class="service"><strong>Tire Service</strong><div class="small muted">Rotation, repair, mounting</div></div>
+        <div class="service"><strong>AC & Heating</strong><div class="small muted">Diagnostics & repair</div></div>
+      </div>
+
+      <h2 style="margin-top:20px">Gallery</h2>
+      <div class="gallery" aria-hidden="false">
+        [cite: 17]
+        <img alt="Shop exterior" src="https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=800&q=60">
+        <img alt="Mechanic working" src="https://images.unsplash.com/photo-1518544880458-23b3e9ab4a82?auto=format&fit=crop&w=800&q=60">
+        <img alt="Tools" src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=800&q=60">
+        <img alt="Vehicle lift" src="https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=800&q=60">
+        <img alt="Tire service" src="https://images.unsplash.com/photo-1542365887-8f98c0ee5d6d?auto=format&fit=crop&w=800&q=60">
+        <img alt="Diagnostics" src="https://images.unsplash.com/photo-1518331647617-1a5d9de0b3f7?auto=format&fit=crop&w=800&q=60">
+      </div> [cite: 18]
+    </section>
+
+    <section class="card" aria-labelledby="reviews-heading">
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <h2 id="reviews-heading" style="margin-bottom:0;">Customer Reviews</h2>
+        <div class="small muted">All visible reviews are 5★ (exceptions you will paste later)</div>
+      </div>
+
+      <div id="reviews" class="reviews-list" aria-live="polite" style="margin-top:16px"> [cite: 19]
+        </div>
+
+      <div style="margin-top:16px;display:flex;gap:8px;align-items:center;justify-content:flex-start;">
+        <button id="toggleReviews" class="btn" aria-expanded="false">Show more</button>
+        <div id="countText" class="muted small"></div>
+      </div>
+    </section>
+
+    <section class="card" aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Contact & Book</h2>
+      <p class="small muted">Call for fastest response.</p>
+      <p style="margin:6px 0"><a class="btn" href="tel:+19187184349">Call +1 (918) 718-4349</a></p>
+
+      [cite: 21]
+      <form id="contactForm" method="POST" action="https://formspree.io/f/your-form-id">
+        <label class="small">Name
+          <input name="name" type="text" placeholder="Your name" required>
+        </label>
+        <label class="small">Email
+          <input name="_replyto" type="email" placeholder="you@example.com" required>
+        </label>
+        <label class="small">Phone
+          <input name="phone" type="tel" placeholder="+1 (___) ___-____"> [cite: 23]
+        </label>
+        <label class="small">Message
+          <textarea name="message" rows="4" placeholder="How can we help?" required></textarea> [cite: 24]
+        </label>
+
+        <div style="display:flex;gap:8px;margin-top:8px">
+          <button type="submit" class="btn">Send message</button>
+          <a href="mailto:info@farsideautorepair.example" class="small muted" style="align-self:center">Or email directly</a>
+        </div>
+
+        <div class="meta">We respond Mon–Sat. You can also call for immediate help.</div> [cite: 25]
+      </form>
+
+      <hr/>
+
+      <div>
+        <h3 style="margin:0 0 6px 0">Location</h3>
+        <div class="small">14371 OK-51, Tahlequah, OK 74464</div>
+        <div style="margin-top:8px"><a class="access-link" target="_blank" rel="noopener" href="https://www.google.com/maps/place/Farside+Auto+Repair/@35.897312,-95.3362264,11z/data=!4m10!1m2!2m1!1sauto+care+oklahoma+tahlequah">Open in Google Maps</a></div>
+      </div> [cite: 26]
+    </section>
+
+    <section class="card" aria-labelledby="payments-heading">
+      <h3 id="payments-heading">Payments & POS</h3>
+      <p class="small muted">If you use Square, replace <code>YOUR_LOCATION_ID</code> in the script below with your actual Square Location ID.</p>
+
+      [cite: 27]
+      <pre style="background:#fff;padding:8px;border-radius:6px;border:1px dashed #ddd;font-size:12px;overflow:auto">
+<div id="square-checkout"></div> [cite: 28]
+<script>
+  const SQUARE_LOCATION_ID = "YOUR_LOCATION_ID"; // <-- replace this with your Square Location ID
+  // Example: initialize a Square widget or button here
+</script>
+      </pre> [cite: 29]
+    </section>
+  </main>
+
+  <footer class="container">
+    <div class="footer-grid">
+      <div>
+        <strong>Farside Auto Repair</strong><br>
+        14371 OK-51, Tahlequah, OK 74464<br>
+        <a href="tel:+19187184349">+1 (918) 718-4349</a><br>
+        <div class="small muted" style="margin-top:8px">Open Tue–Fri 8AM–7PM · Sat 8AM–5PM · Mon 8AM–7PM · Sun Closed</div> [cite: 30]
+      </div>
+      <div>
+        <strong>Quick links</strong>
+        <ul style="margin:8px 0 0 0;padding-left:16px;">
+          <li><a class="access-link" href="#">Home</a></li>
+          <li><a class="access-link" href="#reviews">Reviews</a></li>
+          <li><a class="access-link" href="mailto:info@farsideautorepair.example">Email</a></li>
+        </ul> [cite: 31]
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    /****************************************************************
+     * REVIEWS AREA
+     * IMPORTANT: Replace or paste your reviews into the `reviews` array. [cite: 32]
+     * Keep each review object in the form: { name: "Reviewer", rating: 5, body: "" } [cite: 32, 56]
+     ****************************************************************/
+    const reviews = [
+      // SAMPLE REVIEWS: All 5★ (you can replace these)
+      { name: "Reviewer 1", rating: 5, body: "" },
+      { name: "Reviewer 2", rating: 5, body: "" },
+      { name: "Reviewer 3", rating: 5, body: "" },
+      { name: "Reviewer 4", rating: 5, body: "" },
+      { name: "Reviewer 5", rating: 5, body: "" }, [cite: 37]
+      { name: "Reviewer 6", rating: 5, body: "" },
+      { name: "Reviewer 7", rating: 5, body: "" },
+      { name: "Reviewer 8", rating: 5, body: "" },
+      { name: "Reviewer 9", rating: 5, body: "" },
+      { name: "Reviewer 10", rating: 5, body: "" },
+      { name: "Reviewer 11", rating: 5, body: "" },
+      { name: "Reviewer 12", rating: 5, body: "" }
+      // If you have more reviews, paste them here. [cite: 38]
+    ];
+    
+    // INSTRUCTIONS FOR NEGATIVE REVIEWS [cite: 33]
+    // I did not include any of the negative reviews you mentioned. [cite: 34]
+    // When you paste them here later, keep their text unchanged (per your instruction). [cite: 35, 57]
+    
+    // -- R E N D E R I N G   L O G I C -- (Do not change unless necessary) [cite: 39]
+    const container = document.getElementById('reviews');
+    const toggleBtn = document.getElementById('toggleReviews');
+    const countText = document.getElementById('countText'); [cite: 40]
+    
+    let visibleCount = 6; // Show 6 initially
+    
+    function starSVG(){
+      return `<svg class="star" viewBox="0 0 24 24" aria-hidden="true"><path fill="${'currentColor'}" d="M12 .587l3.668 7.431 8.2 1.192-5.934 5.787L20.335 24 12 19.897 3.665 24l2.401-8.003L.132 9.21l8.2-1.192z"></path></svg>`; [cite: 41]
+    }
+
+    function render(){
+      container.innerHTML = "";
+      const total = reviews.length;
+      const toShow = Math.min(visibleCount, total); [cite: 42]
+      for(let i=0; i < toShow; i++){
+        const r = reviews[i];
+        const div = document.createElement('div'); [cite: 43]
+        div.className = 'review';
+        div.innerHTML = `
+          <div class="rev-left">
+            <div class="avatar" aria-hidden="true">${(r.name||'U').slice(0,1)}</div>
+            <div class="stars" aria-hidden="true">${Array.from({length: r.rating||5}).map(()=>starSVG()).join('')}</div>
+          </div>
+          <div class="rev-body">
+            <div class="rev-name">${escapeHtml(r.name || 'Anonymous')}</div>
+            <div class="rev-text">${escapeHtml(r.body || '')}</div> [cite: 44]
+          </div>`;
+        container.appendChild(div);
+      } [cite: 45]
+
+      const remaining = Math.max(0, total - toShow);
+      if(remaining > 0){ [cite: 46]
+        toggleBtn.style.display = 'inline-block';
+        toggleBtn.textContent = `Show ${remaining} more`;
+        toggleBtn.setAttribute('aria-expanded', 'false');
+        countText.textContent = `Showing ${toShow} of ${total} reviews`; [cite: 47]
+      } else if (total > 6) {
+        toggleBtn.style.display = 'inline-block';
+        toggleBtn.textContent = `Show less`; [cite: 48]
+        toggleBtn.setAttribute('aria-expanded', 'true');
+        countText.textContent = `Showing all ${total} reviews`; [cite: 48]
+      } else {
+        toggleBtn.style.display = 'none'; [cite: 49]
+        countText.textContent = `Showing ${toShow} reviews`; [cite: 49]
+      }
+    } [cite: 50]
+
+    toggleBtn.addEventListener('click', ()=>{
+      const total = reviews.length;
+      if(visibleCount < total){
+        visibleCount = Math.min(total, visibleCount + 6);
+      } else {
+        visibleCount = 6; // collapse back to 6
+        window.scrollTo({top: document.getElementById('reviews').offsetTop - 80, behavior:'smooth'});
+      }
+      render(); [cite: 51]
+    });
+    
+    // Tiny escape to avoid injected markup if you paste raw content [cite: 52]
+    function escapeHtml(s){
+      if(!s) return '';
+      return s.replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[m]); [cite: 53]
+    }
+
+    // Initial render
+    render(); [cite: 54]
+
+    document.getElementById('contactForm').addEventListener('submit', function(e){
+      // This handler is for UX demonstration. To make the form send emails
+      // via Formspree, you can remove this script block.
+      // e.preventDefault();
+      // alert('Form submitted (demo).');
+    });
+  </script>
+</body>
+</html>
